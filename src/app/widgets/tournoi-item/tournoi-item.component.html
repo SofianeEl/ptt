@@ -1,0 +1,14 @@
+<div *ngIf="tournoi" class="d-flex gap-2">
+  <div>
+    <img *ngIf="location?.image" src="{{ location?.image }}" width="50">
+    <img *ngIf="!location?.image" src="/assets/location/empty.png" width="50">
+  </div>
+  <div class="flex-grow-1 d-flex flex-column gap-1">
+    <span id="name"><strong>{{ tournoi.name }}</strong></span>
+    <div>
+      <span id="date">{{ tournoi.date | date: "EEEE d MMMM yyyy HH'h'mm" }}</span>
+      <span id="localisation">{{ location?.name }}</span>
+    </div>
+  </div>
+  <span class="align-self-center"><a href="/liste/{{ tournoi.id }}" class="btn btn-primary btn-sm">détail du tournoi</a></span>
+</div>

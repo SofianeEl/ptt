@@ -1,0 +1,45 @@
+h1{
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  padding-top: 50px;
+}
+img{
+  width: 500px;
+  height: 500px;
+  display: flex;justify-content: center;
+  align-items: center;
+}
+.image{
+  display: flex;justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.address{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
+}
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 420px;
+  white-space: nowrap;
+}
+.suivant{
+  display: flex;
+  justify-content:flex-end;
+}
+
+.material-icons-outlined {
+  font-size: 60px;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 6px;
+
+  &:hover {
+    background-color: #dedede;
+  }
+}

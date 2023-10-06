@@ -1,0 +1,63 @@
+h1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+  font-size: 50px;
+}
+table,
+td {
+  border: 1px solid #333;
+
+
+
+}
+
+thead,
+tfoot {
+  background-color: #333;
+  color: #fff;
+
+
+}
+.detailMatch{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  width: 100%;
+}
+tr{
+  height: 50px;
+  width: 50%;
+}
+#dateTournoi{
+  margin-top: 50px;
+  padding-left: 10px;
+}
+#btnSuprime {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding-left:10px;
+}
+p{
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 10px;
+}
+.adress{
+  padding-left: 10px;
+  margin-top: 10px;
+
+}
+.adress img{
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cursor-zoom {
+  cursor: zoom-in;
+}

@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+
+*, html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.main {
+  min-height: 90vh;
+}
+
+$body-bg: #efefef;
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+// https://github.com/marella/material-icons
+// https://fonts.google.com/icons?selected=Material+Icons
+$material-icons-font-size: 20px !default;
+
+@import 'material-icons/iconfont/material-icons';
+
+.material-icons, .material-icons-outlined  {
+  display: inline-flex;
+  vertical-align: top;
+}

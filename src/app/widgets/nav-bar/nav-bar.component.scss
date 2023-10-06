@@ -1,0 +1,35 @@
+.navbar {
+  height: 40px;
+  background-color: #143385;
+  display: flex;
+  padding: 0 10px;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  a.home {
+    height: 40px;
+  }
+
+  ul {
+    justify-self: end;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+
+    li {
+      list-style: none;
+      line-height: 40px;
+    }
+  }
+
+  a, a:visited {
+    color: #dedede;
+    text-decoration: none;
+
+    &:hover {
+      color: #eee;
+    }
+  }
+}

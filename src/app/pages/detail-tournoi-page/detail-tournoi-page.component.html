@@ -1,0 +1,28 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="container">
+  <div *ngIf="loading">
+    Chargement...
+  </div>
+  <div *ngIf="!loading">
+    <div *ngIf="!tournoi">
+      Ce tournoi n'existe pas
+    </div>
+    <div *ngIf="tournoi" class="mt-5">
+      <h1>Tournoi : {{ tournoi.name }}</h1>
+      <div class="d-flex justify-content-center gap-2">
+        <img *ngIf="location" src="{{ location.image }}" class="cursor-zoom" alt="" height="200" (click)="onLightbox(location)">
+        <div class="d-flex flex-column gap-2">
+          <div>{{ tournoi.date | date: "EEEE d MMMM yyyy (HH'h'mm)" }}</div>
+          <div>Nombre de joueurs {{ tournoi.peopleCount || 'non spécifié' }}</div>
+          <div>Niveau {{ tournoi.level }}</div>
+          <div *ngIf="location">{{ location.name }} {{ location.address }}  {{ location.city }} {{ location.district }}</div>
+          <div class="d-flex justify-content-end gap-2">
+            <a href="/edition/{{ tournoi.id }}" class="btn btn-primary"><span class="material-icons-outlined">edit</span> Editer</a>
+            <button (click)="onDelete()" class="btn btn-danger"><span class="material-icons-outlined">delete</span> Suprimer</button>
+          </div>
+        </div>
+      </div>
+  </div>
+
+</div>

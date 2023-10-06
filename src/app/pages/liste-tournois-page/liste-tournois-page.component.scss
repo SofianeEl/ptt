@@ -1,0 +1,60 @@
+h1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+  font-size: 50px;
+}
+img.background {
+  user-drag: none;
+  pointer-events: none;
+}
+
+.backgrounds {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  z-index: -1;
+  opacity: 0.5;
+
+  .image {
+    position: relative;
+    height: 500px;
+    background-image: url("/assets/image2.jpg");
+    background-blend-mode: luminosity;
+    background-repeat: no-repeat;
+    background-size: 800px 500px;
+    background-position: 50% 0;
+    background-color: #013372;
+  }
+  .image2 {
+    position: relative;
+    height: 500px;
+    background-image: url("/assets/parc.jpg");
+    background-blend-mode: luminosity;
+    background-repeat: no-repeat;
+    background-size: 800px 500px;
+    background-position: 50% 0;
+    background-color: #013372;
+  }
+}
+.tournoi{
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 5px solid black;
+}
+.tournoi name{
+  margin-right: 20px;
+}
+
+.list {
+  width: 900px;
+  margin: auto;
+  padding: 10px;
+  background-color: white;
+  border-radius: 6px;
+}

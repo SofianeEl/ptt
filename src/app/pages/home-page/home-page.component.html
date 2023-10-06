@@ -1,0 +1,44 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="main">
+  <div class="title">
+    <div id="title2">
+      <h1 class="zoom-in-out-box">{{ title }}</h1>
+      <div class="subtitle">
+        <p>Paris Tennis de Table</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="section pingpong-table">
+    <p class="paragraph left">Nous avons créé se site pour vous<br>
+      programmer des tournoi de ping-pong<br>
+      vous faire aimé notre sport</p>
+    <p class="paragraph right">Participer<br>
+      à nos<br>
+      tournois</p>
+  </section>
+
+  <section class="section we-like">
+
+  </section>
+
+  <section class="section">
+    <h2>Prochain tournoi</h2>
+    <ng-container *ngIf="next">
+      <app-tournoi-item [tournoi]="next"></app-tournoi-item>
+    </ng-container>
+    <ng-container *ngIf="!next">
+      <div>Pas de prochain tournoi</div>
+    </ng-container>
+
+    <a href="/liste">Voir la liste</a>
+  </section>
+
+  <section class="p-4">
+    <a href="/caroussel">Voir la liste des lieu</a>
+  </section>
+</div>
+
+
+<app-footer></app-footer>

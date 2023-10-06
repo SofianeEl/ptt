@@ -1,0 +1,12 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="main">
+  <h1>{{ title }}</h1>
+
+  <div class="d-flex flex-column justify-content-between gap-2 list">
+    <app-tournoi-item *ngFor="let tournoi of tournois" [tournoi]="tournoi"></app-tournoi-item>
+  </div>
+</div>
+
+<app-footer></app-footer>
+

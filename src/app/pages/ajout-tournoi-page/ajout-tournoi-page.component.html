@@ -1,0 +1,43 @@
+<app-nav-bar></app-nav-bar>
+
+<h1>{{ title }}</h1>
+
+<form>
+  <div *ngIf="tournoi" class="fomulaire">
+    <div class="mb-3">
+      <label for="name" class="form-label">Nom</label>
+      <input type="input" class="form-control" id="name" name="name" [(ngModel)]="tournoi.name">
+    </div>
+
+    <div class="preparation">Date:</div>
+    <input class="input" type="datetime-local" name="date" [(ngModel)]="date">
+
+    <fieldset>
+
+      <legend class="preparation">Lieu:</legend>
+      <select class="input" name="locationId" [(ngModel)]="tournoi.locationId">
+        <option *ngFor="let option of locations" [ngValue]="option.id">{{ option.address }} {{ option.city }} ({{ option.district }}ième) - {{ option.name }} {{ option.image }}</option>
+      </select>
+    </fieldset>
+
+    <div class="preparation">Nombre de joueurs:</div>
+    <input class="input" type="number" name="peopleCount" min="2" [(ngModel)]="tournoi.peopleCount">
+
+    <fieldset>
+      <legend class="preparation">Niveau:</legend>
+      <select class="input" name="level" [(ngModel)]="tournoi.level">
+        <option *ngFor="let option of levelOptions">{{ option }}</option>
+      </select>
+    </fieldset>
+
+    <div class="preparation">Description:</div>
+    <textarea class="description" rows="6" name="description" [(ngModel)]="tournoi.description"></textarea>
+
+    <div>
+      <button class="bouton" type="submit" (click)="onSave()">Sauver</button>
+    </div>
+  </div>
+</form>
+
+
+

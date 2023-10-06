@@ -1,0 +1,25 @@
+<app-nav-bar></app-nav-bar>
+
+<h1>Liste des lieux</h1>
+
+<div class="d-flex justify-content-center">
+  <div class="d-flex gap-2">
+    <div class="d-flex align-items-center">
+      <span class="material-icons-outlined me-4" (click)="onPrevious()">arrow_back_ios</span>
+    </div>
+    <div class="d-flex flex-column gap-1">
+      <div class="image">
+        <img *ngIf="currentLocation" src="{{ currentLocation.image }}">
+      </div>
+      <div class="address">
+        <div class="ellipsis" *ngIf="currentLocation">{{ currentLocation.name }} {{ currentLocation.address }}  {{ currentLocation.city }} {{ currentLocation.district }}</div>
+        <div>{{ currentIndex + 1 }} / {{ locations.length }}</div>
+      </div>
+    </div>
+    <div class="d-flex align-items-center ms-4">
+      <span class="material-icons-outlined" (click)="onNext()">arrow_forward_ios</span>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

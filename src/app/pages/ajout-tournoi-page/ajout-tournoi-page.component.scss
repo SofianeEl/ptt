@@ -1,0 +1,40 @@
+h1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+fieldset {
+  border: 0;
+}
+
+form {
+  max-width: 600px;
+  margin: auto;
+
+  .input{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 4px;
+  }
+  .preparation{
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .description{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 4px;
+    min-width: 100%;
+    max-width: 100%;
+  }
+  button{
+    width: 10%;
+    height: 30px;
+    cursor: pointer;
+  }
+}

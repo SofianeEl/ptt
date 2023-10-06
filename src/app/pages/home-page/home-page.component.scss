@@ -1,0 +1,83 @@
+
+
+.title {
+  background-color: chocolate;
+  border: solid 2px black;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 50px;
+
+  h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    color: white;
+  }
+
+  .zoom-in-out-box {
+    margin: 24px;
+    width: 200px;
+    height: 100px;
+    animation: zoom-in-zoom-out 1s ease infinite;
+    @keyframes zoom-in-zoom-out {
+      0% {
+        transform: scale(1, 1);
+      }
+      50% {
+        transform: scale(1.5, 1.5);
+      }
+      100% {
+        transform: scale(1, 1);
+      }
+    }
+  }
+
+  .subtitle {
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+  }
+}
+
+.section {
+  &.pingpong-table {
+    position: relative;
+    height: 500px;
+    background-image: url("/assets/table-de-ping-pong.jpg");
+    background-repeat: no-repeat;
+    background-size: 800px 500px;
+    background-position: 50% 0;
+    background-color: #013372;
+
+    img.background {
+      user-drag: none;
+      pointer-events: none;
+    }
+
+    .paragraph {
+      color: white;
+      font-size: 25px;
+      font-weight: bold;
+      display: inline-block;
+
+      &.left {
+        position: absolute;
+        top: 20px;
+        left: 28px;
+      }
+
+      &.right {
+        position: absolute;
+        bottom: 50px;
+        right: 50px;
+      }
+    }
+  }
+
+  &.we-like {
+
+  }
+}
